@@ -5,8 +5,8 @@ on:
     branches:
       - main # 触发动作的分支
   schedule:
-    # 每周1-5的UTC时间7:15运行，按需调整，即北京时间的15:15
-    - cron: '15 7 * * 1-5'
+    # 每周1-5的UTC时间14:15运行，按需调整，即北京时间的22:15
+    - cron: '15 14 * * 1-5'
 
 jobs:
   build-and-commit-csv:
