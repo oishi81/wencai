@@ -22,13 +22,14 @@ jobs:
 
     - name: Configure Git
       run: |
-        git config --local user.email "378600950@qq.com"
-        git config --local user.name "qqhsx"
+        git config --local user.email "oishi@qq.com"
+        git config --local user.name "oishi"
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install pywencai
+        pip install datetime
 
     - name: Run Python script
       run: |
