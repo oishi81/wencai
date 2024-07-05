@@ -1,6 +1,7 @@
 import pywencai
 import os
 import datetime
+import pandas as pd
 
 # 获取关键字列表
 keywords = os.environ.get("KEYWORD", "").split(',')
@@ -12,5 +13,10 @@ for keyword in keywords:
     filename = f'{keyword}-{tomorrow}.csv'
     keyword2 = t2+' '+keyword
     res = pywencai.get(query=keyword2, loop=True)
-    res.to_csv(filename, index=False, encoding='utf-8-sig')
-    print(res)
+    columns_to_select = [0, 1, 4, 9]
+    # 使用iloc来截取列
+    selected_res = df.iloc[:, columns_to_select]
+    if res is None:
+        raise ValueError("Did not receive any data. The result is None.")
+    selected_res.to_csv(filename, index=False, encoding='utf-8-sig')
+    print(slected_columns)
