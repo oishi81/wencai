@@ -30,6 +30,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pywencai
         pip install datetime
+        pip install pandas
 
     - name: Run Python script
       run: |
