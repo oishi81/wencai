@@ -20,4 +20,4 @@ for keyword in keywords:
     if res is None:
         raise ValueError("Did not receive any data. The result is None.")
     selected_res.to_csv(filename, index=False, encoding='utf-8-sig')
-    print(slected_columns)
+    #print(selected_res)
