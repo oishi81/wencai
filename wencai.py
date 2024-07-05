@@ -8,6 +8,7 @@ keywords = os.environ.get("KEYWORD", "").split(',')
 today = datetime.date.today()
 tomorrow = today + datetime.timedelta(days=1)
 t2 = tomorrow.strftime('%m月%d日')
+t2 = '07月05日'
 # 遍历关键字列表进行查询和保存结果
 for keyword in keywords:
     filename = f'{keyword}-{tomorrow}.csv'
