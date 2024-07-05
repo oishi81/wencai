@@ -38,9 +38,9 @@ jobs:
       env:
         KEYWORD: ${{ secrets.KEYWORD }}
 
-    - name: Run Custom data script
-      run: |
-        python popularity.py
+    #- name: Run Custom data script
+    #  run: |
+    #    python popularity.py
       
     - name: Commit changes
       run: |
