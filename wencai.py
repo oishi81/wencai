@@ -13,6 +13,7 @@ t2 = tomorrow.strftime('%m月%d日')
 # 遍历关键字列表进行查询和保存结果
 for keyword in keywords:
     filename = f'{keyword}-{tomorrow}.csv'
+    filename2 = f'{keyword}-{tomorrow}.xlsx'
     keyword2 = t2+' '+keyword
     res = pywencai.get(query=keyword2, loop=True)
     columns_to_select = [0, 1, 5, 10]
@@ -21,5 +22,5 @@ for keyword in keywords:
     if res is None:
         raise ValueError("Did not receive any data. The result is None.")
     selected_res.to_csv(filename, index=False, encoding='utf-8-sig')
-    selected_res.to_excel('{filename}.xlsx', index=False)  # index=False表示不写入行索引 
+    selected_res.to_excel(filename2, index=False)  # index=False表示不写入行索引 
     #print(selected_res)
