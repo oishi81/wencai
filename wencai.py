@@ -2,6 +2,7 @@ import pywencai
 import os
 import datetime
 import pandas as res
+import openpyxl
 
 # 获取关键字列表
 keywords = os.environ.get("KEYWORD", "").split(',')
@@ -20,4 +21,5 @@ for keyword in keywords:
     if res is None:
         raise ValueError("Did not receive any data. The result is None.")
     selected_res.to_csv(filename, index=False, encoding='utf-8-sig')
+    selected_res.to_excel('{filename}.xlsx', index=False)  # index=False表示不写入行索引 
     #print(selected_res)
