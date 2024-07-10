@@ -37,7 +37,7 @@ for keyword in keywords:
       sheet[f'B{i+2}'] = selected_res.iloc[i,0]
       sheet[f'F{i+2}'] = selected_res.iloc[i,3]
   if rows_to_delete > 0:
-    for i in range(res_rows, sheet_rows):
+    for i in range(sheet_rows, res_rows, -1):
       sheet.delete_rows(i)
   
   #sheet.calculate()
