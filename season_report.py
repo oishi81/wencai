@@ -40,7 +40,7 @@ for keyword in keywords:
     for i in range(sheet_rows, res_rows, -1):
       sheet.delete_rows(i)
   
-  sheet.calculate()
+  #sheet.calculate()
   output_path = f'季报汇总-{tomorrow}.xlsx'
   workbook.save(output_path)
 
