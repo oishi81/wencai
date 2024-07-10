@@ -33,11 +33,11 @@ for keyword in keywords:
   for i in range(res_rows):
     sheet_row = i + 1
     if sheet_row <= sheet_rows:
-      sheet[f'A{i+2}'] = selected_res.iloc[i,0]
-      sheet[f'C{i+2}'] = selected_res.iloc[i,1]
+      sheet[f'B{i+2}'] = selected_res.iloc[i,0]
+      sheet[f'F{i+2}'] = selected_res.iloc[i,3]
 
   workbook.calculate()
-  output_path = f'season_report-{tomorrow}.xlsx'
+  output_path = f'季报汇总-{tomorrow}.xlsx'
   workbook.save(output_path)
 
 
