@@ -25,7 +25,7 @@ for keyword in keywords:
 
   workbook_path = 'module.xlsx'
   workbook = load_workbook(workbook_path)
-  workbook.calc_on_load = True
+  #workbook.calc_on_load = True
   sheet= workbook.active
   #确定行数
   res_rows = len(selected_res)
@@ -37,7 +37,7 @@ for keyword in keywords:
       sheet[f'B{i+2}'] = selected_res.iloc[i,0]
       sheet[f'F{i+2}'] = selected_res.iloc[i,3]
   if rows_to_delete > 0:
-    for i in range(sheet_rows, res_rows, -1):
+    for i in range(res_rows, sheet_rows):
       sheet.delete_rows(i)
   
   #sheet.calculate()
