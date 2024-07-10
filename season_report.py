@@ -38,9 +38,9 @@ for keyword in keywords:
       sheet[f'F{i+2}'] = selected_res.iloc[i,3]
   if rows_to_delete > 0:
     for i in range(sheet_rows, res_rows, -1):
-      workbook.delete_rows(i)
+      sheet.delete_rows(i)
   
-  #workbook.calculate()
+  sheet.calculate()
   output_path = f'季报汇总-{tomorrow}.xlsx'
   workbook.save(output_path)
 
