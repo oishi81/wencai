@@ -36,7 +36,7 @@ for keyword in keywords:
       sheet[f'B{i+2}'] = selected_res.iloc[i,0]
       sheet[f'F{i+2}'] = selected_res.iloc[i,3]
 
-  workbook.calculate()
+  #workbook.calculate()
   output_path = f'季报汇总-{tomorrow}.xlsx'
   workbook.save(output_path)
 
