@@ -34,7 +34,8 @@ jobs:
 
     - name: Run Python script
       run: |
-        python wencai.py
+        #python wencai.py
+        python season_report.py
       env:
         KEYWORD: ${{ secrets.KEYWORD }}
 
