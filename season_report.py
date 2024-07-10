@@ -30,7 +30,7 @@ for keyword in keywords:
   #确定行数
   res_rows = len(selected_res)
   sheet_rows = sheet.max_row
-  #rows_to_delete = sheet_rows - res_rows
+  rows_to_delete = sheet_rows - res_rows
   for i in range(res_rows):
     sheet_row = i + 1
     if sheet_row <= sheet_rows:
