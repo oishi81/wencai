@@ -30,12 +30,16 @@ for keyword in keywords:
   #确定行数
   res_rows = len(selected_res)
   sheet_rows = sheet.max_row
+  #rows_to_delete = sheet_rows - res_rows
   for i in range(res_rows):
     sheet_row = i + 1
     if sheet_row <= sheet_rows:
       sheet[f'B{i+2}'] = selected_res.iloc[i,0]
       sheet[f'F{i+2}'] = selected_res.iloc[i,3]
-
+  if rows_to_delete > 0:
+    for i in range(sheet_rows, res_rows, -1):
+      ws.delete_rows(i)
+  
   #workbook.calculate()
   output_path = f'季报汇总-{tomorrow}.xlsx'
   workbook.save(output_path)
