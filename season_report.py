@@ -42,7 +42,7 @@ for keyword in keywords:
   
   #sheet.calculate()
   output_path = f'季报汇总-{tomorrow}.xlsx'
-  workbook.save(output_path, keep_vba=True)
+  workbook.save(output_path)
 
 
   
