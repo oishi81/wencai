@@ -24,7 +24,7 @@ for keyword in keywords:
   #selected_res.to_excel(filename, index=False)  # index=False表示不写入行索引
 
   workbook_path = 'module.xlsx'
-  workbook = load_workbook(workbook_path)
+  workbook = load_workbook(workbook_path, ignore_links=False)
   #workbook.calc_on_load = True
   sheet= workbook.active
   #确定行数
@@ -42,7 +42,7 @@ for keyword in keywords:
   
   #sheet.calculate()
   output_path = f'季报汇总-{tomorrow}.xlsx'
-  workbook.save(output_path)
+  workbook.save(output_path, keep_vba=True)
 
 
   
