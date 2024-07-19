@@ -22,5 +22,5 @@ for keyword in keywords:
     if res is None:
         raise ValueError("Did not receive any data. The result is None.")
     selected_res.to_csv(filename, index=False, encoding='utf-8-sig')
-    selected_res.to_excel(filename2, index=False)  # index=False表示不写入行索引 
+    #selected_res.to_excel(filename2, index=False)  # index=False表示不写入行索引 
     #print(selected_res)
